@@ -124,21 +124,27 @@ body {
 }
 
 /* Gallery Grid */
+.gallery-title {
+  text-align: center;
+  justify-content: center;
+}
+
 .photo-gallery {
-    display: grid;
-  	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
-    padding: 20px;
-  	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .photo-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  	width: 300px;
-  	height: 300px;
-    transition: transform 0.3s ease;
+  position: relative;
+  flex: 1 1 min(30vmin, 18rem);
+  max-width: min(30vmin, 18rem);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .photo-card:hover {
